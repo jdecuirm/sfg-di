@@ -1,6 +1,5 @@
 package guru.springframework.sfgdi.config;
 
-import com.jdecuirm.pets.DogPetService;
 import com.jdecuirm.pets.PetService;
 import com.jdecuirm.pets.PetServiceFactory;
 import guru.springframework.sfgdi.repositories.EnglishGreetingRepository;
@@ -18,11 +17,11 @@ public class GreetingServiceConfig {
     @Bean
     FakeDataSource fakeDataSource(@Value("${guru.username}") String username,
                                   @Value("${guru.password}") String password,
-                                  @Value("${guru.jdbcurl}") String jdbcurl) {
+                                  @Value("${guru.jdbcUrl}") String jdbcurl) {
         FakeDataSource fakeDataSource = new FakeDataSource();
         fakeDataSource.setUsername(username);
         fakeDataSource.setPassword(password);
-        fakeDataSource.setJdbcurl(jdbcurl);
+        fakeDataSource.setJdbcUrl(jdbcurl);
 
         return fakeDataSource;
     }

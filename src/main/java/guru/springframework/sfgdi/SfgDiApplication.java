@@ -7,7 +7,6 @@ import guru.springframework.sfgdi.services.SingletonBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 public class SfgDiApplication {
@@ -53,7 +52,7 @@ public class SfgDiApplication {
 		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
 		System.out.println(fakeDataSource.getUsername());
 		System.out.println(fakeDataSource.getPassword());
-		System.out.println(fakeDataSource.getJdbcurl());
+		System.out.println(fakeDataSource.getJdbcUrl());
 	}
 
 }
